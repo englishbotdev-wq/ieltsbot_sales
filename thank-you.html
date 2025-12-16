@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Purchase!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e0e0e0;
+            background-color: #121212;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            text-align: center;
+        }
+        .success-box {
+            background: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #4CAF50;
+            margin: 30px 0;
+        }
+        h1 { color: #4CAF50; margin-bottom: 20px; }
+        .next-steps {
+            text-align: left;
+            background: #252525;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-box">
+        <h1>✅ Purchase Successful!</h1>
+        <p style="font-size: 1.2em;">Thank you for purchasing the IELTS Spelling Bot.</p>
+        
+        <div class="next-steps">
+            <h3>📥 Your Download & Next Steps:</h3>
+            <ol>
+                <li><strong>Download Link:</strong> Sent to your email within 5 minutes</li>
+                <li><strong>Check Spam:</strong> If not received, check spam/junk folder</li>
+                <li><strong>Installation:</strong> Follow guide in README.txt</li>
+                <li><strong>Support:</strong> Contact @Ieltss_admin on Telegram if needed</li>
+            </ol>
+        </div>
+        
+        <p><strong>Order ID:</strong> <span id="order-id">Loading...</span></p>
+        
+        <div style="margin-top: 30px;">
+            <a href="index.html" class="btn">← Back to Store</a>
+            <a href="readme.html" class="btn" style="background: #2196F3;">📖 View Documentation</a>
+        </div>
+    </div>
+    
+    <script>
+        // گرفتن Order ID از URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('order_id') || 'NP-' + Date.now();
+        document.getElementById('order-id').textContent = orderId;
+    </script>
+</body>
+</html>
