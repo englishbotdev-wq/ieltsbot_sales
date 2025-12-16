@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Demo - IELTS Bot</title>
+    <title>Video Demo - IELTS Spelling Bot</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,19 +19,48 @@
             color: #64b5f6;
             text-decoration: none;
             font-weight: bold;
+            padding: 10px 20px;
+            border: 1px solid #333;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        .back-button:hover {
+            background: #1e1e1e;
+            border-color: #64b5f6;
         }
         .video-container {
             background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
             margin-bottom: 30px;
+            border: 1px solid #333;
+        }
+        h1 {
+            color: #bb86fc;
+            margin-bottom: 20px;
         }
         video {
             width: 100%;
             max-width: 800px;
             border-radius: 8px;
             background: #000;
+            margin: 20px 0;
+        }
+        ul {
+            padding-left: 20px;
+            text-align: left;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #cfd8dc;
+        }
+        .download-box {
+            background: #252525;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #4CAF50;
         }
     </style>
 </head>
@@ -39,28 +68,47 @@
     <a href="index.html" class="back-button">← Back to Main Store</a>
     
     <div class="video-container">
-        <h1>🎥 IELTS Bot - Full Demo</h1>
-        <p>Watch the complete functionality demonstration (5:24)</p>
+        <h1>🎥 IELTS Spelling Bot - Full Demo</h1>
+        <p style="color: #aaa; margin-bottom: 20px;">Watch the complete functionality demonstration (5:24)</p>
         
-        <!-- اگر demo.mp4 داری -->
-        <video controls poster="demo-preview.jpg">
-            <source src="demo.mp4" type="video/mp4">
+        <!-- ویدیو از GitHub Releases -->
+        <video controls poster="video-preview.jpg">
+            <source src="https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/releases/download/v1.0/demo.mp4" type="video/mp4">
             Your browser doesn't support the video tag.
         </video>
         
-        <!-- یا اگر ویدیو در یوتیوب است -->
-        <!-- <iframe width="800" height="450" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+        <!-- راهنمای پخش -->
+        <div style="background: #252525; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: left;">
+            <h3>🎮 Playback Controls:</h3>
+            <ul>
+                <li>Click the play button to start</li>
+                <li>Use spacebar to play/pause</li>
+                <li>Fullscreen: click the fullscreen icon or press "F"</li>
+                <li>Volume: use the slider or press up/down arrows</li>
+            </ul>
+        </div>
         
-        <div style="margin-top: 20px; text-align: left; background: #252525; padding: 15px; border-radius: 8px;">
+        <!-- هایلایت‌های دمو -->
+        <div style="margin-top: 20px; text-align: left; background: #252525; padding: 20px; border-radius: 8px;">
             <h3>📝 Demo Highlights:</h3>
             <ul>
                 <li>User registration and login flow</li>
                 <li>Spelling practice with instant feedback</li>
-                <li>Audio pronunciation in 3 accents</li>
+                <li>Audio pronunciation in 3 accents (US/UK/AU)</li>
                 <li>Progress tracking dashboard</li>
                 <li>Admin panel functionality</li>
                 <li>Payment integration demonstration</li>
             </ul>
+        </div>
+        
+        <!-- دانلود مستقیم -->
+        <div class="download-box">
+            <p><strong>📥 Having playback issues?</strong></p>
+            <p>Download the video file directly:</p>
+            <a href="https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/releases/download/v1.0/demo.mp4" 
+               style="color: #4CAF50; font-weight: bold;">
+               Download Demo Video (MP4)
+            </a>
         </div>
     </div>
     
